@@ -2,24 +2,36 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
-        }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+            // Exemplo de lista de cursos
+            var courses = new List<Course>
         {
-            count++;
+            new Course { CourseName = "Programação", Description = "Aprenda lógica e sintaxe de programação." },
+            new Course { CourseName = "Banco de Dados", Description = "Entenda conceitos de banco de dados relacionais." },
+            new Course { CourseName = "Desenvolvimento Web", Description = "Criação de sites e aplicativos web." }
+        };
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            CoursesList.ItemsSource = courses;
         }
+
+        private async void OnCourseSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedCourse = (Course)e.SelectedItem;
+            if (selectedCourse != null)
+            {
+                // Navegar para a página de detalhes do curso
+                await Navigation.PushAsync(new CourseDetailPage(selectedCourse));
+            }
+        }
+    }
+
+    public class Course
+    {
+        public string CourseName { get; set; }
+        public string Description { get; set; }
     }
 
 }
