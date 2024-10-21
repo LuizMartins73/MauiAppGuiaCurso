@@ -1,37 +1,35 @@
-﻿namespace MauiAppGuiaCurso
+﻿namespace MauiAppGuiaCurso;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-
-            // Exemplo de lista de cursos
-            var courses = new List<Course>
-        {
-            new Course { CourseName = "Programação", Description = "Aprenda lógica e sintaxe de programação." },
-            new Course { CourseName = "Banco de Dados", Description = "Entenda conceitos de banco de dados relacionais." },
-            new Course { CourseName = "Desenvolvimento Web", Description = "Criação de sites e aplicativos web." }
-        };
-
-            CoursesList.ItemsSource = courses;
-        }
-
-        private async void OnCourseSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var selectedCourse = (Course)e.SelectedItem;
-            if (selectedCourse != null)
-            {
-                // Navegar para a página de detalhes do curso
-                await Navigation.PushAsync(new CourseDetailPage(selectedCourse));
-            }
-        }
+        InitializeComponent();
     }
 
-    public class Course
+    // Navegação para as páginas
+    private async void OnSobreOCursoClicked(object sender, EventArgs e)
     {
-        public string CourseName { get; set; }
-        public string Description { get; set; }
+        await Navigation.PushAsync(new SobreOCursoPage());
     }
 
+    private async void OnDisciplinasClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new DisciplinasPage());
+    }
+
+    private async void OnProjetosClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ProjetosPage());
+    }
+
+    private async void OnMercadoTrabalhoClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MercadoTrabalhoPage());
+    }
+
+    private async void OnFaleConoscoClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new FaleConoscoPage());
+    }
 }

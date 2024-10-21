@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppGuiaCurso.DisciplinasPage"
+             Title="Disciplinas do Curso">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Disciplinas do Curso"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="• Programação de Computadores I"
+                   FontSize="18" />
+            <Label Text="• Banco de Dados"
+                   FontSize="18" />
+            <Label Text="• Redes de Computadores"
+                   FontSize="18" />
+            <Label Text="• Sistemas Operacionais"
+                   FontSize="18" />
+            <Label Text="• Desenvolvimento Web"
+                   FontSize="18" />
+
+            <Button Text="Voltar"
+                    Clicked="OnBackButtonClicked"
+                    HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

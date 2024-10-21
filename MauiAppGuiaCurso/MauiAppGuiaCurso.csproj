@@ -66,4 +66,16 @@
 	  <Folder Include="models\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="DisciplinasPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProjetosPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SobreOCursoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

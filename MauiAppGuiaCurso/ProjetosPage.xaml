@@ -1,0 +1,35 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppGuiaCurso.ProjetosPage"
+             Title="Projetos dos Alunos">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Projetos Realizados pelos Alunos"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Exemplo de Projeto 1 -->
+            <Label Text="• Sistema de Controle de Estoque"
+                   FontSize="18" />
+            <Label Text="Aplicativo criado para gerenciar inventário de pequenas empresas."
+                   FontSize="16" />
+
+            <!-- Exemplo de Projeto 2 -->
+            <Label Text="• App de Agendamento"
+                   FontSize="18" />
+            <Label Text="Sistema de agendamento para barbearias, clínicas e outros serviços."
+                   FontSize="16" />
+
+            <!-- Exemplo de Projeto 3 -->
+            <Label Text="• Blog Pessoal com Front-end"
+                   FontSize="18" />
+            <Label Text="Projeto de site blog utilizando HTML, CSS, e JavaScript."
+                   FontSize="16" />
+
+            <Button Text="Voltar"
+                    Clicked="OnBackButtonClicked"
+                    HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
